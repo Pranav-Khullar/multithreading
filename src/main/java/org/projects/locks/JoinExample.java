@@ -15,7 +15,7 @@ public class JoinExample {
         System.out.println("Lock released by thread: " + Thread.currentThread().getName());
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println("Main thread started");
 
         JoinExample joinExample = new JoinExample();
