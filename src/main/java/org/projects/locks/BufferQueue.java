@@ -62,7 +62,7 @@ public class BufferQueue {
         return data;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         /* Creating two consumer threads to demonstrate multiple consumers waiting on the buffer */
         /*
