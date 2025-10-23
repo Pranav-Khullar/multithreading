@@ -7,7 +7,7 @@ public class ThreadExample8 {
      * Creating a daemon thread that runs indefinitely, but since daemon threads do not prevent the JVM from exiting,
      * the program will terminate after the main thread completes its execution.
      * so daemon threads are typically used for background tasks that should not block the application from shutting down.
-     * daemon threads are useful for tasks like garbage collection, background monitoring, or other low-priority tasks
+     * daemon threads are useful for tasks like garbage collection, logging, background monitoring, or other low-priority tasks
      * they should not do critical work that must be completed before the application exits.
      **/
     public static void main(String[] args) {
