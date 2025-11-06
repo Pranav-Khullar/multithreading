@@ -55,7 +55,9 @@ public class LockConditionExample {
 
         Thread producerThread = new Thread(() -> {
             try {
-                example.produce();
+                for(int i = 0; i < 2; i++) {
+                    example.produce();
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -63,7 +65,9 @@ public class LockConditionExample {
 
         Thread consumerThread = new Thread(() -> {
             try {
-                example.consume();
+                for(int i = 0; i < 2; i++) {
+                    example.consume();
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
