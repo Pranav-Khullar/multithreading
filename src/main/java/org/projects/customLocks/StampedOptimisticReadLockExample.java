@@ -21,7 +21,7 @@ import java.util.concurrent.locks.StampedLock;
  * perform the necessary modifications, and then use a CAS operation to update the variable only if it
  * has not been changed by another thread in the meantime. If the CAS operation fails, the thread can retry the operation.
  */
-public class StampedOptimisticLockExample {
+public class StampedOptimisticReadLockExample {
 
     int value = 0;
     StampedLock stampedLock = new StampedLock();
@@ -67,7 +67,7 @@ public class StampedOptimisticLockExample {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        StampedOptimisticLockExample example = new StampedOptimisticLockExample();
+        StampedOptimisticReadLockExample example = new StampedOptimisticReadLockExample();
 
         Thread reader1 = new Thread(() -> {
             example.read();
